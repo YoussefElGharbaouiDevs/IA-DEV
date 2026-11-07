@@ -1,0 +1,5 @@
+{
+  "command": "uv pip check --python .\\.venv\\Scripts\\python.exe",
+  "exit_code": 0,
+  "output": "Checked 183 packages in 267ms\nAll installed packages are compatible\n"
+}

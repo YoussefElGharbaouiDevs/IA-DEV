@@ -1,0 +1,15 @@
+> .\.venv\Scripts\python.exe C:\Users\ziade\Documents\ChatGPT\Homework\tmp\kits\tp2-semaine2\appliquer_tp2.py C:\Users\ziade\Desktop\5IADO-tp2\sentiment-app
+Dépôt cible : C:\Users\ziade\Desktop\5IADO-tp2\sentiment-app
+  ajoute         src/make_demo.py
+  ajoute         src/train.py
+  ajoute         src/evaluate.py
+  ajoute         src/predict.py
+  ajoute         tests/test_model.py
+  ajoute         notebooks/TP2-colab.ipynb
+  ajoute         TP2-ENONCE.md
+  ajoute         MARCHE-A-SUIVRE-TP2.md
+  ajoute         .gitignore : !models/metrics.json
+
+Kit installé. Suite : lire MARCHE-A-SUIVRE-TP2.md, puis python src/make_demo.py
+
+Code de sortie : 0

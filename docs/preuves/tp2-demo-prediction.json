@@ -1,0 +1,5 @@
+{
+  "command": ".\\.venv\\Scripts\\python.exe src/predict.py \"Livraison rapide, produit conforme, très satisfait\"",
+  "exit_code": 0,
+  "output": "positive (confiance 78%)\n"
+}

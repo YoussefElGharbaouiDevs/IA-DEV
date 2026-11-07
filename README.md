@@ -52,4 +52,4 @@ Ce dossier provient de l’archive `sentiment-app.zip` du cours. Conformément �
 
 Sous Windows, les commandes peuvent être exécutées directement avec `.\.venv\Scripts\python.exe`, sans modifier la politique PowerShell. Python 3.11.15 est utilisé ; NumPy 1.26.4 est retenu pour conserver l’environnement déjà validé par le groupe. Le journal est dans `docs/journal-tp1-tp6.md` et les sorties réelles dans `docs/preuves/`.
 
-Les dépendances utilisées aux TP1 et TP2 sont installées. Les autres bibliothèques de `requirements.txt` seront ajoutées avant les TP qui les utilisent.
+Toutes les dépendances de `requirements.txt` sont installées dans le venv Python 3.11.15. Le contrôle `uv pip check` ne signale aucun conflit ; les versions effectivement installées sont consignées dans `requirements.lock`.

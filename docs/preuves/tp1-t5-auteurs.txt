@@ -1,0 +1,4 @@
+> git shortlog -sn --all
+     1	elwafiZiad
+
+Code de sortie : 0

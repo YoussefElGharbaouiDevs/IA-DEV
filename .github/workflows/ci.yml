@@ -1,12 +1,21 @@
 name: CI
 on: [push, pull_request]
 jobs:
-  tp1:
+  tp2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - run: python -m venv .venv && . .venv/bin/activate && pip install pandas scikit-learn pytest
+      - name: Environnement Python des TP1 et TP2
+        run: |
+          python -m venv .venv
+          . .venv/bin/activate
+          pip install 'pandas==2.2.*' 'scikit-learn==1.5.*' 'joblib==1.4.*' 'pytest==8.3.*' 'numpy==1.26.4'
+      - name: Modèle de démonstration pour les tests du TP2
+        run: |
+          . .venv/bin/activate
+          python src/make_demo.py
+          python src/train.py
       - run: . .venv/bin/activate && pytest -q
