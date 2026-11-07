@@ -44,4 +44,4 @@ sentiment-app/
 | --- | --- | --- | --- |
 | Membre A | KABIL Mohamed | @Mohamed-Kabil | |
 | Membre B | ELGHARBAOUI Youssef| @YoussefElGharbaouiDevs | |
-| Membre C | ELWAFI Ahmed Ziad | @elwafiZiad | |
+| Membre C | ELWAFI Ahmed Ziad | @elwafiZiad | Préparation de l’environnement Python 3.11, installation des dépendances et validation des 38 tests du TP1. |
