@@ -1,0 +1,4 @@
+> .\.venv\Scripts\python.exe --version
+Python 3.11.15
+
+Code de sortie : 0

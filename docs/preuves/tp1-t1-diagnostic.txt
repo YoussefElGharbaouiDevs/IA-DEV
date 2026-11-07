@@ -1,0 +1,38 @@
+> .\.venv\Scripts\python.exe scripts/check_setup.py
+Diagnostic TP1 dans C:\Users\ziade\Desktop\5IADO-tp2\sentiment-app
+
+Python
+  OK         version 3.11.15
+  OK         environnement virtuel actif (C:\Users\ziade\Desktop\5IADO-tp2\sentiment-app\.venv)
+Paquets
+  OK         pandas 2.2.3
+  OK         scikit-learn 1.5.2
+  OK         pytest 8.3.5
+Structure du dépôt
+  OK         dossier data/
+  OK         dossier models/
+  OK         dossier app/
+  OK         dossier ui/
+  OK         dossier tests/
+  OK         dossier scripts/
+  OK         dossier docs/cadrage/
+  OK         fichier README.md
+  OK         fichier requirements.txt
+  OK         fichier .gitignore
+  OK         .gitignore contient .venv/
+  OK         .gitignore contient __pycache__/
+  OK         .gitignore contient .env
+  OK         .gitignore contient models/
+  OK         .gitignore contient mlruns/
+Git
+  ERREUR     ce dossier n'est pas un dépôt Git : git init ou git clone
+Fiches de cadrage
+  OK         3 fiches trouvées
+  ATTENTION  cas1-pharmacie.md : 0 approche(s) cochée(s), une seule attendue
+  ATTENTION  cas2-reglement.md : 0 approche(s) cochée(s), une seule attendue
+  ATTENTION  cas3-avis-negatifs.md : 0 approche(s) cochée(s), une seule attendue
+
+Résultat : 1 erreur(s), 3 avertissement(s)
+Corriger les erreurs avant de pousser.
+
+Code de sortie : 1

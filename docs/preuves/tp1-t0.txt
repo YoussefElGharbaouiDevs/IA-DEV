@@ -1,0 +1,19 @@
+> .\.venv\Scripts\python.exe -c "from pathlib import Path; print('\n'.join(sorted(p.name for p in Path('.').iterdir())))"
+.env.example
+.github
+.gitignore
+.venv
+README.md
+TESTS.md
+TP1-ENONCE.md
+app
+data
+docs
+models
+pytest.ini
+requirements.txt
+scripts
+tests
+ui
+
+Code de sortie : 0

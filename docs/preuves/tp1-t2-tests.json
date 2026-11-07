@@ -1,0 +1,5 @@
+{
+  "command": ".\\.venv\\Scripts\\python.exe -m pytest -q",
+  "exit_code": 0,
+  "output": "..................................ssss                                   [100%]\n=========================== short test summary info ===========================\nSKIPPED [1] tests\\test_environment.py:55: pas un dépôt Git\nSKIPPED [1] tests\\test_git_history.py:29: pas un dépôt Git\nSKIPPED [1] tests\\test_git_history.py:33: pas un dépôt Git\nSKIPPED [1] tests\\test_git_history.py:41: pas un dépôt Git\n34 passed, 4 skipped in 5.69s\n"
+}
