@@ -4,6 +4,7 @@
 
 ## En cours
 
+- Interface Streamlit lancée sur `http://127.0.0.1:8501`, raccordée à l’API locale sur `http://127.0.0.1:8000`. La page affiche « API prête ». Les fichiers d’exécution `api/` et `ui/` proviennent des kits TP3 et TP5 ; leur ajout pour cet aperçu ne valide pas les exercices TP3 à TP5.
 - Installation complète des dépendances terminée dans `.venv` (Python 3.11.15). Contrôle effectué : `All installed packages are compatible`. `requirements.lock` a été actualisé.
 - Préparation du nouveau dépôt GitHub sous `elwafiZiad`. La connexion au compte dans le navigateur intégré est encore attendue.
 

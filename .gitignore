@@ -29,3 +29,11 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+!data/avis_exemple.csv
+!data/jeu_or.csv
+src/sentiment_app/modele/*.joblib
+docs/livrable-tp4.txt
+.mypy_cache/
+.ruff_cache/
+target/
