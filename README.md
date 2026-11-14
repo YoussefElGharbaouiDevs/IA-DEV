@@ -1,42 +1,37 @@
-# sentiment-app : dépôt du binôme
+# sentiment-app 1.0.0
 
-Application fil rouge du cours *Développement et déploiement d'applications intelligentes*.
-Ce dépôt grandit chaque semaine ; la semaine 1 met en place le cadrage et l'environnement.
+Application de classification d’avis français : modèle, API FastAPI /v1 protégée,
+Streamlit (avis/CSV, graphiques/export), client HTML /web et roue autonome.
 
-## Installation (3 commandes)
+Installation du livrable et lancement complet : [README-PAQUET.md](README-PAQUET.md).
 
-```bash
-python -m venv .venv
-source .venv/bin/activate        # Windows PowerShell : .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+## Développement (Python 3.11)
+
+```powershell
+py -3.11 -m venv .venv
+.venv/Scripts/python.exe -m pip install -r requirements-app.txt -r requirements-dev.txt
+.venv/Scripts/python.exe src/make_demo.py
+.venv/Scripts/python.exe src/train.py
+New-Item -ItemType Directory -Force src/sentiment_app/modele
+Copy-Item models/sentiment.joblib src/sentiment_app/modele/
+.venv/Scripts/python.exe -m pip install -e .
+.venv/Scripts/python.exe -m pytest -q --cov=api --cov-fail-under=95
+.venv/Scripts/python.exe -m ruff check .
+.venv/Scripts/python.exe -m mypy api
+.venv/Scripts/python.exe -m build
+.venv/Scripts/python.exe scripts/verifier_livrable.py
 ```
 
-## Vérifier son installation
+Le rapport de vérification installe la roue dans un venv neuf hors du dépôt, puis teste
+la commande, l’API, les rôles et Streamlit/CSV/export. Les tests du paquet installé sont
+ignorés dans le mode éditable et sont obligatoires dans cette vérification isolée.
+Le modèle et .env ne sont pas suivis dans Git ; metrics.json est versionné.
+Les ressources avancées du semestre restent dans requirements.txt ; requirements-app.txt
+suffit à cette application. Aucun besoin de Docker pour exécuter le livrable.
 
-```bash
-python scripts/check_setup.py    # diagnostic lisible : versions, dossiers, Git
-pytest -q                        # mêmes vérifications sous forme de tests
-```
-
-La démarche complète de test, étape par étape, est dans `TESTS.md`.
-
-## Structure
-
-```text
-sentiment-app/
-├── README.md
-├── TP1-ENONCE.md    # énoncé du TP de la semaine 1
-├── TESTS.md         # démarche à suivre pour le test
-├── requirements.txt
-├── .gitignore
-├── data/            # jeux de données (versionnés par DVC à partir de la semaine 7)
-├── models/          # modèles entraînés (jamais dans Git)
-├── app/             # API FastAPI (semaine 3)
-├── ui/              # Streamlit (semaine 5)
-├── tests/           # pytest (semaine 1 : tests d'environnement)
-├── scripts/         # utilitaires (check_setup, nouveau cas de cadrage)
-└── docs/cadrage/    # fiches de cadrage du TP1
-```
+Les rapports sont dans docs/semaine3.md à semaine5.md. Le jeu d’or est une proposition
+assistée à valider par le groupe, avec une erreur connue explicitement conservée.
+La configuration CI est locale jusqu’au prochain push ; aucune publication distante n’est revendiquée.
 
 ## Membres du binôme
 

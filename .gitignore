@@ -12,6 +12,7 @@ build/
 # Artefacts lourds (DVC et MLflow à partir de la semaine 7)
 models/*
 !models/.gitkeep
+!models/metrics.json
 data/*
 !data/.gitkeep
 !data/sample_reviews.csv
@@ -28,3 +29,24 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# TP4
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+!data/jeu_or.csv
+
+# TP5
+!data/avis_exemple.csv
+
+# Modèle embarqué lors de la construction seulement
+src/sentiment_app/modele/*.joblib
+docs/livrable-tp4.txt
+
+# Local run state and verification transcripts
+work/
+build-results.txt
+sdist-results.txt
+test-results.txt
+verification-results.txt
+final-verification.txt

@@ -1,0 +1,16 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Analyse de sentiment</title><style>body{font:18px system-ui;background:#f1f5f9;color:#172b42;max-width:780px;margin:60px auto;padding:24px}main{background:white;padding:32px;border-radius:20px}textarea,input,button{font:inherit;padding:12px;box-sizing:border-box;width:100%;margin:10px 0}button{background:#164e63;color:white;border:0;border-radius:8px}output{display:block;white-space:pre-wrap;padding:20px;background:#eef6f7}small{color:#526477}</style>
+<main><h1>Analyse des avis clients</h1><p>Estimez le sentiment d’un avis en français. Les résultats incertains sont à vérifier par un humain.</p>
+<label>Clé d’accès<input id="key" type="password" autocomplete="off"></label>
+<label>Avis<textarea id="text" maxlength="2000" rows="5" placeholder="Votre avis…"></textarea></label>
+<button id="analyse">Analyser</button><output id="result" role="status">Prêt à analyser.</output>
+<p><small>Modèle pédagogique : la confiance ne garantit pas une réponse correcte. La clé reste en mémoire dans cette page.</small></p><a href="/docs">Documentation API</a></main>
+<script>
+document.querySelector('#analyse').onclick=async()=>{
+const result=document.querySelector('#result'),button=document.querySelector('#analyse');button.disabled=true;
+try{const response=await fetch('/v1/predict',{method:'POST',headers:{'Content-Type':'application/json','X-API-Key':document.querySelector('#key').value},body:JSON.stringify({text:document.querySelector('#text').value})});
+const data=await response.json();if(!response.ok){result.textContent=data.erreur?.message||'Requête refusée';return;}
+const labels={POSITIVE:'Avis positif',NEGATIVE:'Avis négatif',INDETERMINE:'À vérifier par un humain'};
+result.textContent=labels[data.label]+' — confiance '+Math.round(data.score*100)+' %';
+}catch{result.textContent='API injoignable. Vérifiez que le serveur est lancé.';}finally{button.disabled=false;}};
+</script></html>

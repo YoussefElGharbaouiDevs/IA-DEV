@@ -1,0 +1,13 @@
+include README.md README-PAQUET.md CHANGELOG.md
+include requirements*.txt pytest.ini .env.example .gitignore .pre-commit-config.yaml
+include TP*-ENONCE.md MARCHE-A-SUIVRE-TP*.md
+recursive-include api *.py
+recursive-include ui *.py
+recursive-include src *.py *.joblib *.html
+recursive-include scripts *.py *.ps1 *.sh
+recursive-include tests *.py
+recursive-include docs *.md
+include data/jeu_or.csv data/avis_exemple.csv data/sample_reviews.csv
+include models/metrics.json
+include .github/workflows/ci.yml
+global-exclude __pycache__ *.pyc

@@ -1,12 +1,26 @@
 name: CI
 on: [push, pull_request]
 jobs:
-  tp1:
+  application:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - run: python -m venv .venv && . .venv/bin/activate && pip install pandas scikit-learn pytest
-      - run: . .venv/bin/activate && pytest -q
+      - run: python -m venv .venv
+      - run: .venv/bin/pip install -r requirements-app.txt -r requirements-dev.txt
+      - name: Modèle reproductible et installation de développement
+        run: |
+          .venv/bin/python src/make_demo.py
+          .venv/bin/python src/train.py
+          mkdir -p src/sentiment_app/modele
+          cp models/sentiment.joblib src/sentiment_app/modele/
+          .venv/bin/pip install -e .
+      - run: .venv/bin/ruff check .
+      - run: .venv/bin/mypy api
+      - run: .venv/bin/pytest -q --cov=api --cov-fail-under=95
+      - run: .venv/bin/python -m build
+      - run: .venv/bin/python -m twine check dist/*
+      - name: Roue installée hors du dépôt
+        run: .venv/bin/python scripts/verifier_livrable.py
