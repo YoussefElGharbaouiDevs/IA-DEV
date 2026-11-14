@@ -1,5 +1,0 @@
-{
-  "command": ".\\.venv\\Scripts\\python.exe -c \"from pathlib import Path; print('\\n'.join(sorted(p.name for p in Path('.').iterdir())))\"",
-  "exit_code": 0,
-  "output": ".env.example\n.github\n.gitignore\n.venv\nREADME.md\nTESTS.md\nTP1-ENONCE.md\napp\ndata\ndocs\nmodels\npytest.ini\nrequirements.txt\nscripts\ntests\nui\n"
-}

@@ -1,5 +1,0 @@
-{
-  "command": ".\\.venv\\Scripts\\python.exe src/evaluate.py",
-  "exit_code": 0,
-  "output": "Évaluation sur 58 avis (demo)\n\n              precision    recall  f1-score   support\n\n    negative      0.844     0.931     0.885        29\n    positive      0.923     0.828     0.873        29\n\n    accuracy                          0.879        58\n   macro avg      0.883     0.879     0.879        58\nweighted avg      0.883     0.879     0.879        58\n\nMatrice de confusion (lignes = vérité, colonnes = prédiction)\n            negative  positive\n  negative        27         2\n  positive         5        24\n\n2 négatifs classés positifs, 5 positifs classés négatifs\n\n7 erreurs au total. Trois exemples :\n  vérité=positive  prédit=negative  | Taille trop petite et retour payant au déballage, sauf que ensuite produit conforme à la d\n  vérité=positive  prédit=negative  | Commande jamais reçue et remboursement en attente au début, sauf que ensuite je recommande\n  vérité=negative  prédit=positive  | Service impeccable et livraison en avance sur le papier, sauf que ensuite produit cassé à \n"
-}

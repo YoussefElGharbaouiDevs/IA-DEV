@@ -1,5 +1,0 @@
-{
-  "command": ".\\.venv\\Scripts\\python.exe --version",
-  "exit_code": 0,
-  "output": "Python 3.11.15\n"
-}

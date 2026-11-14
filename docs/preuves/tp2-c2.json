@@ -1,5 +1,0 @@
-{
-  "command": ".\\.venv\\Scripts\\python.exe src/make_demo.py",
-  "exit_code": 0,
-  "output": "290 avis écrits dans data\\demo_reviews.csv\n  145 positifs, 145 négatifs\n  dont 100 avis mitigés et 30 neutres, volontairement difficiles\n"
-}

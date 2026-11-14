@@ -1,5 +1,0 @@
-{
-  "command": ".\\.venv\\Scripts\\python.exe src/train.py --allocine",
-  "exit_code": 0,
-  "output": "Source : allocine, 20000 avis (10204 négatifs)\n16000 avis d'entraînement, 4000 de test\nVocabulaire : 149529 termes\nF1 macro sur le jeu de test : 0.920 (seuil 0.85)\nModèle : models\\sentiment.joblib\nMétriques : models\\metrics.json (versionné dans Git, contrairement au modèle)\n"
-}

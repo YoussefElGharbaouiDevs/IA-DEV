@@ -1,4 +1,0 @@
-> .\.venv\Scripts\python.exe src/predict.py "Livraison rapide, produit conforme, très satisfait"
-positive (confiance 78%)
-
-Code de sortie : 0

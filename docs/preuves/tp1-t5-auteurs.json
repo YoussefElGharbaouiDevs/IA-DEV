@@ -1,5 +1,0 @@
-{
-  "command": "git shortlog -sn --all",
-  "exit_code": 0,
-  "output": "     1\telwafiZiad\n"
-}

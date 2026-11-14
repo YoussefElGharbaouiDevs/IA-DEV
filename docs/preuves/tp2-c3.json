@@ -1,5 +1,0 @@
-{
-  "command": ".\\.venv\\Scripts\\python.exe src/train.py",
-  "exit_code": 0,
-  "output": "Source : demo, 290 avis (145 négatifs)\n232 avis d'entraînement, 58 de test\nVocabulaire : 316 termes\nF1 macro sur le jeu de test : 0.879 (seuil 0.85)\nModèle : models\\sentiment.joblib\nMétriques : models\\metrics.json (versionné dans Git, contrairement au modèle)\n"
-}

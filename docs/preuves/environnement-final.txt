@@ -1,5 +1,0 @@
-> uv pip check --python .\.venv\Scripts\python.exe
-Checked 183 packages in 267ms
-All installed packages are compatible
-
-Code de sortie : 0

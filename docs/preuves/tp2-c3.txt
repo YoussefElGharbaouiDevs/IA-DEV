@@ -1,9 +1,0 @@
-> .\.venv\Scripts\python.exe src/train.py
-Source : demo, 290 avis (145 négatifs)
-232 avis d'entraînement, 58 de test
-Vocabulaire : 316 termes
-F1 macro sur le jeu de test : 0.879 (seuil 0.85)
-Modèle : models\sentiment.joblib
-Métriques : models\metrics.json (versionné dans Git, contrairement au modèle)
-
-Code de sortie : 0

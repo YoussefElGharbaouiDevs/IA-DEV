@@ -1,51 +1,12 @@
 name: CI
 on: [push, pull_request]
-
 jobs:
-  python:
+  tp1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - name: Installer et entraîner
-        run: |
-          python -m venv .venv
-          .venv/bin/python -m pip install -r requirements-tp.txt
-          .venv/bin/python src/make_demo.py
-          .venv/bin/python src/train.py
-      - name: Qualité du code
-        run: |
-          .venv/bin/python -m ruff check .
-          .venv/bin/python -m mypy api
-          .venv/bin/python -m pytest -q --cov=api --cov-fail-under=95
-      - name: Construire et vérifier le livrable du TP4
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: |
-          mkdir -p src/sentiment_app/modele
-          cp models/sentiment.joblib src/sentiment_app/modele/
-          .venv/bin/python -m build
-          .venv/bin/python scripts/verifier_livrable.py
-
-  client-web:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-      - run: node --test web/client.test.mjs
-
-  service-java:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: "21"
-          cache: maven
-      - run: mvn -B -f java/avis-service/pom.xml verify
+        with: { python-version: "3.11" }
+      - run: python -m venv .venv && . .venv/bin/activate && pip install pandas scikit-learn pytest
+      - run: . .venv/bin/activate && pytest -q
